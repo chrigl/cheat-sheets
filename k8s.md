@@ -5,3 +5,9 @@ kubectl get nodes -ogo-template='{{range .items}}{{ if .status.volumesAttached }
 ```
 
 Note: This only works in non-[CSI](https://github.com/container-storage-interface/spec) environments.
+
+# Decode secrets
+
+```bash
+kubectl get secret my-secret -ogo-template='{{index .data "config.yaml" | base64decode}}'
+```
