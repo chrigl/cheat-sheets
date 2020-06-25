@@ -11,3 +11,9 @@ Note: This only works in non-[CSI](https://github.com/container-storage-interfac
 ```bash
 kubectl get secret my-secret -ogo-template='{{index .data "config.yaml" | base64decode}}'
 ```
+
+# Run `kubectl` as serviceaccount
+
+```bash
+kubectl -n kube-public --as system:serviceaccount:monitoring:prometheus-operator get prometheusrules
+```
