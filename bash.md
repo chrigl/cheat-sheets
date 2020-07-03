@@ -43,3 +43,9 @@ The python equivalent is
 >>> a & b
 {'b'}
 ```
+
+# echo to stderr
+
+```
+>&2 echo "error"
+```
