@@ -34,3 +34,33 @@ Build and push to `localhost`:
 ```
 docker buildx build --network host --platform linux/arm64/v8,linux/amd64 --tag localhost:5000/multi-arch-test:latest --push .
 ```
+
+Inspect the manifest:
+```
+docker manifest inspect --insecure localhost:5000/multi-arch-test:latest
+
+{
+   "schemaVersion": 2,
+   "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+   "manifests": [
+      {
+         "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+         "size": 739,
+         "digest": "sha256:4139855abd22559eefa51893353d7d5b6c87336f0910fce5a2f852cd7616a1c4",
+         "platform": {
+            "architecture": "arm64",
+            "os": "linux"
+         }
+      },
+      {
+         "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+         "size": 739,
+         "digest": "sha256:efee871e3283ce51480576c9d70f29d451a37661bf79028252a5d12f9fcc6621",
+         "platform": {
+            "architecture": "amd64",
+            "os": "linux"
+         }
+      }
+   ]
+}
+```
