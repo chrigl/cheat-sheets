@@ -86,3 +86,21 @@ show status
  Last reboot on 2020-10-26 17:08:42.880
  Last reconfiguration on 2020-10-26 17:08:42.880
 ```
+
+# What does the output mean
+
+```
+# birdc show route
+BIRD 1.6.8 ready.
+0.0.0.0/0          via 100.64.0.13 on ens1f0 [ens1f0 13:07:19] ! (100) [AS65400i]
+                   via 100.64.1.13 on ens1f1 [ens1f1 13:07:19] (100) [AS65400i]
+                   via 10.40.83.45 on ens6f0 [kernel1 13:07:17] (10)
+10.131.0.0/23      dev tun0 [direct1 13:07:34] * (240)
+10.0.0.0/8         via 100.64.0.13 on ens1f0 [ens1f0 13:07:19] * (100) [AS65400i]
+                   via 100.64.1.13 on ens1f1 [ens1f1 13:07:20] (100) [AS65400i]
+```
+
+```
+*    - Selected route
+!    - Unable to push route... combined with an Invalid argument in birds log
+```
