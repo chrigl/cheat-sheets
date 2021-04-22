@@ -104,3 +104,5 @@ BIRD 1.6.8 ready.
 *    - Selected route
 !    - Unable to push route... combined with an Invalid argument in birds log
 ```
+
+In this particular case, bird was configured to set a source address (`krt_prefsrc` in bird speach) to a non existing address.
