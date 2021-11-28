@@ -1,3 +1,6 @@
+---
+tags: [bird, networking, bgp]
+---
 # Get details of protocol
 
 ```

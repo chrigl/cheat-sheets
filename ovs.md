@@ -1,3 +1,6 @@
+---
+tags: [networking]
+---
 # Create a trace packet
 
 ```

@@ -1,3 +1,6 @@
+---
+tags: [curl]
+---
 # Measure time until first byte received
 
 ```

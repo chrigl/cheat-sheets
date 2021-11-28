@@ -1,3 +1,6 @@
+---
+tags: [bash]
+---
 # Loop over output of another command and run ssh
 
 We need a new file descriptor here

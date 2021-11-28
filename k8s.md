@@ -1,3 +1,6 @@
+---
+tags: [k8s, kubernetes, kubectl]
+---
 # Get number of attached volumes per node
 
 ```bash

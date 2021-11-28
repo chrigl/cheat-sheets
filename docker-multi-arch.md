@@ -1,3 +1,6 @@
+---
+tags: [docker, buildx, buildkit]
+---
 # Building multi arch images with docker buildx
 
 Docker does not support local multi-platform images, which means, we must tell `buildx` to push the results.

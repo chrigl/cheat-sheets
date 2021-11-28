@@ -1,3 +1,6 @@
+---
+tags: [openssl]
+---
 # Create a CSR with a new key and sign it with a CA
 
 This is only useful if the CA is at hand, but useful for some internal bootstrapping of certs.

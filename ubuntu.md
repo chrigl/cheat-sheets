@@ -1,3 +1,6 @@
+---
+tags: [ubuntu]
+---
 # extra-modules / vrf
 
 Some modules are not there even though they are listed in the config e.g. `vrf`. This happend in the official focal cloud image.
