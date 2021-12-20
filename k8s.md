@@ -28,3 +28,17 @@ see gist runs in kube-system [debug-ds.yaml](https://gist.github.com/chrigl/6184
 ```bash
 kubectl apply -f https://gist.githubusercontent.com/chrigl/6184d4de911052711b149665829ce66d/raw/9bdad211a6bdc6498d0722614b2e1911224bdbf5/debug-ds.yaml
 ```
+
+# Get logs of previous terminated container
+
+```bash
+kubectl logs -p -c ruby web-1
+```
+
+# Find all jobs in BackLimitExceeded
+
+No error handling here, so be prepared for `jq: error (at <stdin>:17450): Cannot iterate over null (null)`
+
+```bash
+kubectl  get jobs -ojson -A | jq -r '.items[] | select(.status.conditions[] | select(.reason=="BackoffLimitExceeded" and .type == "Failed" and .status == "True")) | [.metadata.namespace, .metadata.name] | @tsv'
+```
