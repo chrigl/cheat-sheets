@@ -13,3 +13,9 @@ While this certainly comes at a cost of more power consumption and more cooling,
 Sometimes you can change it on OS level, but I also saw servers where adjustments to bios settings were needed.
 
 From my experience, this recommendation also applies to [Quobyte Storage](https://www.quobyte.com/).
+
+# Allow deletion of pools
+
+```
+ceph tell mon.* injectargs --mon_allow_pool_delete true
+```
