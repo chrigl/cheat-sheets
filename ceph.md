@@ -17,5 +17,5 @@ From my experience, this recommendation also applies to [Quobyte Storage](https:
 # Allow deletion of pools
 
 ```
-ceph tell mon.* injectargs --mon_allow_pool_delete true
+ceph tell "mon.*" config set mon_allow_pool_delete true
 ```
