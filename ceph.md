@@ -19,3 +19,10 @@ From my experience, this recommendation also applies to [Quobyte Storage](https:
 ```
 ceph tell "mon.*" config set mon_allow_pool_delete true
 ```
+
+# Notes
+
+## Subvolume snaphot mirroring
+
+* https://tracker.ceph.com/issues/49125
+* https://github.com/ceph/ceph/pull/42091
