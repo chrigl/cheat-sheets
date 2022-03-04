@@ -22,7 +22,7 @@ ceph tell "mon.*" config set mon_allow_pool_delete true
 
 # Notes
 
-## Subvolume snaphot mirroring
+## Subvolume snapshot mirroring
 
 * https://tracker.ceph.com/issues/49125
 * https://github.com/ceph/ceph/pull/42091
