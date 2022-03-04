@@ -20,6 +20,14 @@ From my experience, this recommendation also applies to [Quobyte Storage](https:
 ceph tell "mon.*" config set mon_allow_pool_delete true
 ```
 
+# Change default crush rule
+
+```
+ceph config get global osd_pool_default_crush_rule $ID
+```
+
+You might want to do this in a setup with mixed disk types.
+
 # Notes
 
 ## Subvolume snapshot mirroring
