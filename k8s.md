@@ -42,3 +42,31 @@ No error handling here, so be prepared for `jq: error (at <stdin>:17450): Cannot
 ```bash
 kubectl  get jobs -ojson -A | jq -r '.items[] | select(.status.conditions[] | select(.reason=="BackoffLimitExceeded" and .type == "Failed" and .status == "True")) | [.metadata.namespace, .metadata.name] | @tsv'
 ```
+
+# ingress nginx
+
+Hmm. Maybe not the right place here, but good for now.
+
+`ingress-nginx` doesn't write the the full configuration to `/etc/nginx/nginx.conf` but uses lua for some parts. There is a tool `/dbg` in the container to help debugging.
+
+```bash
+$ /dbg --help
+dbg is a tool for quickly inspecting the state of the nginx instance
+
+Usage:
+  dbg [command]
+
+Available Commands:
+  backends    Inspect the dynamically-loaded backends information
+  certs       Inspect dynamic SSL certificates
+  completion  Generate the autocompletion script for the specified shell
+  conf        Dump the contents of /etc/nginx/nginx.conf
+  general     Output the general dynamic lua state
+  help        Help about any command
+
+Flags:
+  -h, --help              help for dbg
+      --status-port int   Port to use for the lua HTTP endpoint configuration. (default 10246)
+
+Use "dbg [command] --help" for more information about a command.
+```
