@@ -26,7 +26,7 @@ kubectl -n kube-public --as system:serviceaccount:monitoring:prometheus-operator
 see gist runs in kube-system [debug-ds.yaml](https://gist.github.com/chrigl/6184d4de911052711b149665829ce66d)
 
 ```bash
-kubectl apply -f https://gist.githubusercontent.com/chrigl/6184d4de911052711b149665829ce66d/raw/9bdad211a6bdc6498d0722614b2e1911224bdbf5/debug-ds.yaml
+kubectl apply -f https://gist.githubusercontent.com/chrigl/6184d4de911052711b149665829ce66d/raw/11ec5a0196fd0c8f415e7a3faf53e68e523d66e4/debug-ds.yaml
 ```
 
 # Get logs of previous terminated container
