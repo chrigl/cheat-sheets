@@ -1,6 +1,13 @@
 ---
 tags: [networking]
 ---
+
+# Create a port
+
+```
+ovs-vsctl add-port br-ex myfoo -- set Interface myfoo type=internal
+```
+
 # Create a trace packet
 
 ```
