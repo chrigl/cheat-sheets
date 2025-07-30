@@ -34,3 +34,9 @@ You might want to do this in a setup with mixed disk types.
 
 * https://tracker.ceph.com/issues/49125
 * https://github.com/ceph/ceph/pull/42091
+
+# Get front / back ip addresses and more info
+
+```
+ceph osd metadata [osd.ID]
+```
