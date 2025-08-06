@@ -1,9 +1,14 @@
 ---
 tags: [ceph]
 ---
+
 # TheJJ/ceph-cheatsheet
 
 [The definitive ceph cheat sheet is here](https://github.com/TheJJ/ceph-cheatsheet)
+
+# RED HAT CEPH STORAGE CHEAT SHEET
+
+[Summary of Certain Operations-oriented Ceph Commands](https://access.redhat.com/sites/default/files/attachments/ceph-commands-cheat-sheet-us-letter.pdf)
 
 # Set cpu governor to `performance` on OSDs
 
@@ -32,8 +37,8 @@ You might want to do this in a setup with mixed disk types.
 
 ## Subvolume snapshot mirroring
 
-* https://tracker.ceph.com/issues/49125
-* https://github.com/ceph/ceph/pull/42091
+- https://tracker.ceph.com/issues/49125
+- https://github.com/ceph/ceph/pull/42091
 
 # Get front / back ip addresses and more info
 

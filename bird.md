@@ -1,5 +1,5 @@
 ---
-tags: [bird, networking, bgp]
+tags: [bird, networking, bgp, routing]
 ---
 # Get details of protocol
 
