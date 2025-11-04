@@ -1,6 +1,7 @@
 ---
 tags: [k8s, kubernetes, kubectl]
 ---
+
 # Get number of attached volumes per node
 
 ```bash
@@ -71,9 +72,14 @@ Flags:
 Use "dbg [command] --help" for more information about a command.
 ```
 
-
 # Split resource list into a multi document yaml
 
 ```bash
 kubectl -n cortex get ingress -oyaml | yq e '.items[] | split_doc'
+```
+
+# Debug node
+
+```bash
+kubectl debug node/kind-control-plane --image nicolaka/netshoot:latest -ti -- /bin/bash
 ```
