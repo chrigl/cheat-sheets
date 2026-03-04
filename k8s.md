@@ -98,4 +98,5 @@ kubectl -n cortex get ingress -oyaml | yq e '.items[] | split_doc'
 
 ```bash
 kubectl debug node/kind-control-plane --image nicolaka/netshoot:latest -ti -- /bin/bash
+kubectl -n kube-system debug node/kind-control-plane --image nicolaka/netshoot:latest --profile=sysadmin -ti -- /bin/zsh
 ```
