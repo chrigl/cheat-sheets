@@ -2,6 +2,14 @@
 tags: [k8s, kubernetes, kubectl]
 ---
 
+# Kubernetes schema for yaml-language-server
+
+[kubernetes-json-schema](https://github.com/yannh/kubernetes-json-schema)
+
+```
+# yaml-language-server: $schema=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/v1.34.5/pod-v1.json
+```
+
 # Get number of attached volumes per node
 
 ```bash
@@ -20,6 +28,14 @@ kubectl get secret my-secret -ogo-template='{{index .data "config.yaml" | base64
 
 ```bash
 kubectl -n kube-public --as system:serviceaccount:monitoring:prometheus-operator get prometheusrules
+```
+
+# Get a token for a serviceaccount
+
+Useful if you want to run an app locally, but with the permissions of a serviceaccount.
+
+```bash
+kubectl create token $SERVICE_ACCOUNT
 ```
 
 # Run a debug DaemonSet
